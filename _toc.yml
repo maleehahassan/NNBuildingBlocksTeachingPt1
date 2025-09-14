@@ -1,0 +1,11 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: content/01_supervised_learning_overview
+- file: content/02_first_perceptron
+- file: content/03_activation_functions
+- file: content/04_loss_functions
+- file: content/05_hands_on_exercises
