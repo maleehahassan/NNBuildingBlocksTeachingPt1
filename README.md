@@ -32,7 +32,7 @@ Getting started is simple, as no local installation is required.
 
 ---
 
-## 🛠️ Prerequisites
+## Prerequisites
 
 All you need is a web browser and a Google Account. All code is written in Python and relies on the following libraries, which are pre-installed in Google Colab:
 -   `numpy`
