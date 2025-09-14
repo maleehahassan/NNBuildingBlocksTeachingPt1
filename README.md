@@ -26,7 +26,7 @@ By completing the notebook in this repository, you will understand and implement
 
 Getting started is simple, as no local installation is required.
 
-1.  Click the **[Open in Colab]** badge at the top of this README.
+1.  Go to the "notebooks" folder and there you have the exercise and the solution.
 2.  The main notebook will open directly in Google Colab in your browser.
 3.  To start working and save your progress, create your own copy by clicking **`File > Save a copy in Drive`**.
 
