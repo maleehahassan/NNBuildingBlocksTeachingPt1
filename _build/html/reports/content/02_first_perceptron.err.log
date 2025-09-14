@@ -1,0 +1,110 @@
+Traceback (most recent call last):
+  File "/home/runner/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 154, in wrapped
+    asyncio.get_running_loop()
+RuntimeError: no running event loop
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/.local/lib/python3.12/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+    executenb(
+  File "/home/runner/.local/lib/python3.12/site-packages/nbclient/client.py", line 1319, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 158, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/runner/.local/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/runner/.local/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/runner/.local/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Let's start by visualizing a biological neuron vs artificial neuron
+import matplotlib.pyplot as plt
+import numpy as np
+from matplotlib.patches import Circle, FancyBboxPatch
+import matplotlib.patches as patches
+
+fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
+
+# Biological Neuron (simplified)
+ax1.set_xlim(0, 10)
+ax1.set_ylim(0, 6)
+ax1.set_title('Biological Neuron', fontsize=14, fontweight='bold')
+
+# Cell body
+circle = Circle((2, 3), 0.8, color='lightblue', alpha=0.7)
+ax1.add_patch(circle)
+ax1.text(2, 3, 'Cell\nBody', ha='center', va='center', fontsize=10)
+
+# Dendrites (inputs)
+for i, y in enumerate([1.5, 2.5, 3.5, 4.5]):
+    ax1.arrow(0.2, y, 1.0, 0, head_width=0.1, head_length=0.1, fc='green', ec='green')
+    ax1.text(0.1, y, f'Input {i+1}', ha='right', va='center', fontsize=9)
+
+# Axon (output)
+ax1.arrow(2.8, 3, 6.5, 0, head_width=0.15, head_length=0.2, fc='red', ec='red', linewidth=2)
+ax1.text(9.5, 3, 'Output', ha='left', va='center', fontsize=10)
+
+ax1.set_xticks([])
+ax1.set_yticks([])
+ax1.set_aspect('equal')
+
+# Artificial Neuron (Perceptron)
+ax2.set_xlim(0, 10)
+ax2.set_ylim(0, 6)
+ax2.set_title('Artificial Neuron (Perceptron)', fontsize=14, fontweight='bold')
+
+# Processing unit
+circle = Circle((5, 3), 1, color='lightcoral', alpha=0.7)
+ax2.add_patch(circle)
+ax2.text(5, 3, 'Σ', ha='center', va='center', fontsize=20, fontweight='bold')
+
+# Inputs with weights
+inputs = ['x₁', 'x₂', 'x₃']
+weights = ['w₁', 'w₂', 'w₃']
+for i, (inp, w) in enumerate(zip(inputs, weights)):
+    y = 2 + i * 0.7
+    ax2.arrow(1, y, 2.8, 3-y, head_width=0.1, head_length=0.1, fc='blue', ec='blue')
+    ax2.text(0.8, y, inp, ha='right', va='center', fontsize=12)
+    ax2.text(2.5, y+0.2, w, ha='center', va='center', fontsize=10, color='blue')
+
+# Bias
+ax2.arrow(5, 1, 0, 1.8, head_width=0.1, head_length=0.1, fc='purple', ec='purple')
+ax2.text(5, 0.8, 'bias', ha='center', va='center', fontsize=10, color='purple')
+
+# Output
+ax2.arrow(6, 3, 2.5, 0, head_width=0.15, head_length=0.2, fc='red', ec='red', linewidth=2)
+ax2.text(8.8, 3, 'y', ha='left', va='center', fontsize=12)
+
+ax2.set_xticks([])
+ax2.set_yticks([])
+ax2.set_aspect('equal')
+
+plt.tight_layout()
+plt.show()
+
+print("Key Similarities:")
+print("• Both receive multiple inputs")
+print("• Both process and integrate information")
+print("• Both produce a single output")
+print("• Both can learn and adapt")
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mModuleNotFoundError[39m                       Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 2[39m
+[32m      1[39m [38;5;66;03m# Let's start by visualizing a biological neuron vs artificial neuron[39;00m
+[32m----> [39m[32m2[39m [38;5;28;01mimport[39;00m [34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpyplot[39;00m [38;5;28;01mas[39;00m [34;01mplt[39;00m
+[32m      3[39m [38;5;28;01mimport[39;00m [34;01mnumpy[39;00m [38;5;28;01mas[39;00m [34;01mnp[39;00m
+[32m      4[39m [38;5;28;01mfrom[39;00m [34;01mmatplotlib[39;00m[34;01m.[39;00m[34;01mpatches[39;00m [38;5;28;01mimport[39;00m Circle, FancyBboxPatch
+
+[31mModuleNotFoundError[39m: No module named 'matplotlib'
+

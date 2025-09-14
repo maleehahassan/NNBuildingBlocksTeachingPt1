@@ -3,10 +3,9 @@ title: "Neural Networks Building Blocks"
 author: "Train the Trainer Workshop"
 logo: ""
 
-# Force re-execution of notebooks on each build.
-# See https://jupyterbook.org/content/execute.html
+# Don't execute notebooks during build - they are meant for interactive use
 execute:
-  execute_notebooks: force
+  execute_notebooks: off
 
 # Define the name of the latex output file for PDF builds
 latex:
@@ -31,16 +30,7 @@ html:
   use_edit_page_button: true
   navbar_number_sections: false
 
-# Thebe configuration
-# See https://jupyterbook.org/interactive/thebe.html
+# Launch buttons configuration
 launch_buttons:
-  notebook_interface: classic  # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url: https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  notebook_interface: classic
   colab_url: "https://colab.research.google.com"
-
-# Enable Google Colab integration
-sphinx:
-  config:
-    html_theme_options:
-      launch_buttons:
-        colab_url: "https://colab.research.google.com"
