@@ -2,17 +2,17 @@
 
 # Neural Network Building Blocks: A Hands-On Introduction 
 
-Welcome! This repository contains the course materials for the introductory lecture on the fundamental components of neural networks. The course is designed for beginners and uses a hands-on approach with a single, comprehensive Google Colab notebook. We build everything from scratch using only Python, NumPy, and Matplotlib.
+Welcome! This repository contains the course materials for the introductory lecture on the fundamental components of neural networks. The course is designed for beginners and uses a hands-on approach with Google Colab notebooks. We build everything from scratch using only Python, NumPy, and Matplotlib.
 
 ## Overview
 
-The central part of this course is a single, end-to-end project: **building and training a neuron to classify two species of Iris flowers** based on their petal dimensions. This project ties all the theoretical concepts together in a practical application, showing how each building block fits into a complete machine learning workflow.
+The final part of this course is a single, end-to-end project: **building and training a neuron to classify two species of Iris flowers** based on their petal dimensions. This project ties all the theoretical concepts together in a practical application, showing how each building block fits into a complete machine learning workflow.
 
 ---
 
 ## What You'll Learn
 
-By completing the notebook in this repository, you will understand and implement the following core concepts from scratch:
+By completing the notebooks in this repository, you will understand and implement the following core concepts from scratch:
 
 -   **Supervised Learning:** The goal of learning from labeled data.
 -   **The Perceptron:** The structure of a single neuron, including weights and a bias.
@@ -26,8 +26,8 @@ By completing the notebook in this repository, you will understand and implement
 
 Getting started is simple, as no local installation is required.
 
-1.  Go to the "notebooks" folder and there you have the exercise and the solution.
-2.  The main notebook will open directly in Google Colab in your browser.
+1.  Go to the "notebooks" folder and there you have the exercises and the solutions.
+2.  The notebooks will open directly in Google Colab in your browser.
 3.  To start working and save your progress, create your own copy by clicking **`File > Save a copy in Drive`**.
 
 ---
